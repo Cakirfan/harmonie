@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { TypeAnimation } from "react-type-animation";
 import Typed from "typed.js";
 
 const UberUns = () => {
