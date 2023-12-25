@@ -83,7 +83,7 @@ const Footer = () => {
       style={{ marginTop: "5rem" }}
     >
       <div>
-        <div className="row bg-dark mb-3 py-3">
+        <div className="row bg-dark mb-3 py-2">
           <div className="col-6 text-end fs-2">
             Kontaktieren Sie uns per{" "}
             <FontAwesomeIcon
@@ -118,7 +118,7 @@ const Footer = () => {
               <p className="fs-5">+49 (111) 11 11 11 11</p>
             </div>
             <div className="col text-start d-flex flex-column justify-content-center">
-              <div className="row mt-4">
+              <div className="row mt-3 mt-md-4">
                 <div className="col d-flex gap-2 gap-md-5">
                   <span>Aktuelles</span>
                   <span>Archiv</span>
@@ -126,7 +126,7 @@ const Footer = () => {
                   <span>Datenschutzerklärung</span>
                 </div>
                 <div className="col d-flex flex-wrap gap-md-5 flex-md-nowrap">
-                  <ul className="mt-5 lh-2 text-decoration-none">
+                  <ul className="mt-4 mt-md-5 lh-2 text-decoration-none">
                     <h2>Themen</h2>
                     {themen.map((thema, i) => (
                       <li key={i}>
@@ -140,7 +140,7 @@ const Footer = () => {
                       </li>
                     ))}
                   </ul>
-                  <ul className="mt-5 lh-2 text-decoration-none">
+                  <ul className="mt-3 mt-md-5 lh-2 text-decoration-none">
                     <h2>Projekte</h2>
                     {projekte.map((projekt, i) => (
                       <li key={i}>

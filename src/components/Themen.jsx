@@ -76,7 +76,7 @@ const Themen = () => {
             <Link
               to={thema.href}
               key={i}
-              className="bg-success rounded-4 text-decoration-none mb-2 shadow"
+              className="bg-success rounded-4 text-decoration-none mb-4 shadow"
               style={{ height: "14.4rem" }}
             >
               <div

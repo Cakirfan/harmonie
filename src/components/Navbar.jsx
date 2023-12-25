@@ -65,7 +65,7 @@ const Navbar = () => {
               src={logo}
               alt="Logo-Harmonie"
               width={60}
-              className="rounded-circle"
+              className="rounded-2"
             />
           </Link>
           <div
