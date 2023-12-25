@@ -76,12 +76,12 @@ const Themen = () => {
             <Link
               to={thema.href}
               key={i}
-              className="bg-success rounded-4 text-decoration-none mb-2"
-              style={{ height: "12.4rem" }}
+              className="bg-success rounded-4 text-decoration-none mb-2 shadow"
+              style={{ height: "14.4rem" }}
             >
               <div
-                className="bg-secondary-subtle text-center py-3 rounded-4"
-                style={{ height: "12rem", width: "12rem" }}
+                className="bg-secondary-subtle text-center py-3 rounded-4 shadow"
+                style={{ height: "14rem", width: "12rem" }}
               >
                 <div className="text-success py-3 pb-4">{thema.icon}</div>
                 <div className="">

@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+// import { TypeAnimation } from "react-type-animation";
+import Typed from "typed.js";
 
 const UberUns = () => {
 
+  useEffect(() => {
+    // Typed.js konfigürasyonu
+    const options = {
+      strings: [
+        "Harmonie",
+      ],
+      typeSpeed: 100,
+      backSpeed: 150,
+      backDelay: 1500,
+      loop: true,
+    };
+
+    // Typed.js örneği oluşturma ve bağlama
+    const typed = new Typed(".auto-input", options);
+
+    // Komponent kaldırıldığında Typed örneğini temizleme
+    return () => {
+      typed.destroy();
+    };
+  }, []); // Boş bağımlılık dizisi, komponent ilk oluşturulduğunda yalnızca bir kez çalışmasını sağlar
 
   return (
     <section className="row d-flex justify-content-center text-center mt-5 mx-auto">
       <div className="col col-md-9">
         <h1>
           Wilkommen in{" "}
-          <span className="text-success fw-semibold">
-            Harmonie
-          </span>
+          <span className="text-success fw-semibold auto-input"></span>
         </h1>
         <p className="fs-5">
           Das hormonie e.V. wurde 2023 von Engagierten der Hizmet Bewegung
