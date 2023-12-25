@@ -57,15 +57,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
@@ -74,7 +74,10 @@ const news = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ width: "30rem" }}>
+            <div
+              class="card w-100"
+              style={{ width: "30rem", minWidth: "25rem" }}
+            >
               <div class="row g-0">
                 <div class="col-md-5">
                   <img
@@ -85,15 +88,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
@@ -102,7 +105,10 @@ const news = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ width: "30rem" }}>
+            <div
+              class="card w-100"
+              style={{ width: "30rem", minWidth: "25rem" }}
+            >
               <div class="row g-0">
                 <div class="col-md-5">
                   <img
@@ -113,15 +119,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
@@ -130,7 +136,10 @@ const news = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ maxWidth: "540px" }}>
+            <div
+              class="card w-100"
+              style={{ width: "30rem", minWidth: "25rem" }}
+            >
               <div class="row g-0">
                 <div class="col-md-5">
                   <img
@@ -141,15 +150,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
@@ -158,7 +167,10 @@ const news = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ maxWidth: "540px" }}>
+            <div
+              class="card w-100"
+              style={{ width: "30rem", minWidth: "25rem" }}
+            >
               <div class="row g-0">
                 <div class="col-md-5">
                   <img
@@ -169,15 +181,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
@@ -186,7 +198,10 @@ const news = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ maxWidth: "540px" }}>
+            <div
+              class="card w-100"
+              style={{ width: "30rem", minWidth: "25rem" }}
+            >
               <div class="row g-0">
                 <div class="col-md-5">
                   <img
@@ -197,15 +212,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
@@ -214,7 +229,10 @@ const news = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ maxWidth: "540px" }}>
+            <div
+              class="card w-100"
+              style={{ width: "30rem", minWidth: "25rem" }}
+            >
               <div class="row g-0">
                 <div class="col-md-5">
                   <img
@@ -225,43 +243,15 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Wöchentliche oder monatliche Entwicklungen im Verein
+                      können in diesem Bereich, unterstützt durch Bilder und
+                      Kurzinformationen, ausgestellt werden...
                     </p>
                     <p class="card-text">
                       <small class="text-body-secondary">
-                        Last updated 3 mins ago
-                      </small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="overflow-hidden rounded-2">
-            <div class="card w-100" style={{ maxWidth: "540px" }}>
-              <div class="row g-0">
-                <div class="col-md-5">
-                  <img
-                    src="https://cdn.pixabay.com/photo/2018/04/04/15/34/shelf-3290109_640.jpg"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary">
-                        Last updated 3 mins ago
+                        Zuletzt aktualisiert vor ... Minuten
                       </small>
                     </p>
                   </div>
