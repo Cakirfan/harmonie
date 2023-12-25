@@ -65,7 +65,7 @@ const TopCarousel = () => {
           />
           <TypeAnimation
             style={{
-              color: "blue",
+              color: "orangered",
               fontSize: "1rem",
               position: "absolute",
               top: "50%",
@@ -86,7 +86,7 @@ const TopCarousel = () => {
           />
           <TypeAnimation
             style={{
-              color: "blue",
+              color: "orangered",
               fontSize: "1rem",
               position: "absolute",
               top: "50%",
@@ -102,13 +102,13 @@ const TopCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-          className=""
+            className=""
             src="https://cdn.pixabay.com/photo/2023/09/04/10/31/swan-8232481_640.jpg"
             alt=""
           />
           <TypeAnimation
             style={{
-              color: "blue",
+              color: "orangered",
               fontSize: "1rem",
               position: "absolute",
               top: "50%",
