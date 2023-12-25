@@ -140,7 +140,7 @@ const Footer = () => {
                       </li>
                     ))}
                   </ul>
-                  <ul className="mt-3 mt-md-5 lh-2 text-decoration-none">
+                  <ul className="mt-4 mt-md-5 lh-2 text-decoration-none">
                     <h2>Projekte</h2>
                     {projekte.map((projekt, i) => (
                       <li key={i}>
