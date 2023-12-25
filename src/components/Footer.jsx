@@ -83,8 +83,8 @@ const Footer = () => {
       style={{ marginTop: "5rem" }}
     >
       <div>
-        <div className="row bg-dark mb-3 py-2">
-          <div className="col-6 text-end fs-2">
+        <div className="row bg-dark mb-3 py-3">
+          <div className="col-6 text-end fs-2 mb-3">
             Kontaktieren Sie uns per{" "}
             <FontAwesomeIcon
               className="fs-1 ms-3 text-end"
