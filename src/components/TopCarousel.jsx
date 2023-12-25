@@ -56,16 +56,17 @@ const TopCarousel = () => {
         }}
         onSlideChange={handleSlideChange}
         className="mySwiper"
-        style={{ height: "65vh" }} // Set the height to 75vh
+        style={{ height: "65vh", backgroundSize: "cover" }} // Set the height to 75vh
       >
         <SwiperSlide>
           <img
-            src="https://cdn.pixabay.com/photo/2023/11/03/17/41/hummingbird-hawk-moth-8363573_640.jpg"
+            className="object-fit-cover"
+            src="https://cdn.pixabay.com/photo/2016/04/12/18/56/school-1325091_640.png"
             alt=""
           />
           <TypeAnimation
             style={{
-              color: "orangered",
+              color: "white",
               fontSize: "1rem",
               position: "absolute",
               top: "50%",
@@ -81,12 +82,13 @@ const TopCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://cdn.pixabay.com/photo/2023/11/02/10/19/bird-8360220_640.jpg"
+            className="object-fit-cover"
+            src="https://cdn.pixabay.com/photo/2023/04/06/10/22/earth-day-7903523_640.png"
             alt=""
           />
           <TypeAnimation
             style={{
-              color: "orangered",
+              color: "white",
               fontSize: "1rem",
               position: "absolute",
               top: "50%",
@@ -102,13 +104,13 @@ const TopCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=""
-            src="https://cdn.pixabay.com/photo/2023/09/04/10/31/swan-8232481_640.jpg"
+            className="object-fit-cover"
+            src="https://cdn.pixabay.com/photo/2016/11/30/12/09/question-mark-1872634_640.jpg"
             alt=""
           />
           <TypeAnimation
             style={{
-              color: "orangered",
+              color: "white",
               fontSize: "1rem",
               position: "absolute",
               top: "50%",
