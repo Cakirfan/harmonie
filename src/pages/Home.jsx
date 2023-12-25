@@ -2,6 +2,7 @@ import React from "react";
 import TopCarousel from "../components/TopCarousel";
 import Gründung from "../components/Gründung";
 import Themen from "../components/Themen";
+import News from "../components/News"
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <div className="h-100" style={{ height: "100%" }}>
         <TopCarousel />
         <Gründung />
-        <div style={{height:"8rem"}}></div>
+        <News/>
         <Themen/>
       </div>
     </div>
