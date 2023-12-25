@@ -1,76 +1,128 @@
-import React from "react";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { TypeAnimation } from "react-type-animation";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 const TopCarousel = () => {
+  const [text, setText] = useState(
+    "Bu Alana istenilen herhangi bir yazi eklenebilir..."
+  );
+
+  const handleSlideChange = () => {
+    // Update the text content based on the current active slide
+    // You can customize this logic based on your requirements
+    // For simplicity, let's assume each slide has unique text content
+    const currentSlide = swiperRef.current.activeIndex;
+
+    switch (currentSlide) {
+      case 0:
+        setText("Bu Alana istenilen herhangi bir yazi eklenebilir...");
+        break;
+      case 1:
+        setText("Yeni bir metin...");
+        break;
+      case 2:
+        setText("Başka bir metin...");
+        break;
+      // Add more cases for additional slides
+      default:
+        setText("");
+    }
+  };
+
+  const swiperRef = React.useRef(null);
+
   return (
-    <div
-      id="carouselExampleAutoplaying"
-      className="carousel slide rounded-2 overflow-hidden mx-auto z-0 shadow-lg"
-      data-bs-ride="carousel"
-      style={{ width: "90%", height: "75vh" }}
-    >
-      <div className="carousel-inner z-0">
-        <div className="carousel-item active">
-          <img
-            src="https://cdn.pixabay.com/photo/2023/06/11/14/45/apple-8056182_1280.jpg"
-            className="d-block w-100"
-            height="100%"
-            alt="..."
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="https://cdn.pixabay.com/photo/2016/07/13/12/14/inspiration-1514296_1280.jpg"
-            className="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="https://cdn.pixabay.com/photo/2017/09/14/08/28/head-2748333_1280.jpg"
-            className="d-block w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-      <TypeAnimation
-        style={{
-          color: "orangered",
-          fontSize: "2rem",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          whiteSpace: "pre-line",
-          height: "195px",
-          display: "block",
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
-        sequence={[
-          `Line one\nLine Two\nLine Three\nLine Four\nLine Five\n\nLine Seven`, // actual line-break inside string literal also gets animated in new line, but ensure there are no leading spaces
-          1000,
-          "",
-        ]}
-        repeat={Infinity}
-      />
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={handleSlideChange}
+        className="mySwiper"
+        style={{ height: "75vh" }} // Set the height to 75vh
       >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
+        <SwiperSlide>
+          <img
+            src="https://cdn.pixabay.com/photo/2023/11/03/17/41/hummingbird-hawk-moth-8363573_640.jpg"
+            alt=""
+          />
+          <TypeAnimation
+            style={{
+              color: "blue",
+              fontSize: "1rem",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              whiteSpace: "pre-line",
+              height: "195px",
+              display: "block",
+            }}
+            sequence={[text, 1000, ""]}
+            repeat={Infinity}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://cdn.pixabay.com/photo/2023/11/02/10/19/bird-8360220_640.jpg"
+            alt=""
+          />
+          <TypeAnimation
+            style={{
+              color: "blue",
+              fontSize: "1rem",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              whiteSpace: "pre-line",
+              height: "195px",
+              display: "block",
+            }}
+            sequence={[text, 1000, ""]}
+            repeat={Infinity}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://cdn.pixabay.com/photo/2023/09/04/10/31/swan-8232481_640.jpg"
+            alt=""
+          />
+          <TypeAnimation
+            style={{
+              color: "blue",
+              fontSize: "1rem",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              whiteSpace: "pre-line",
+              height: "195px",
+              display: "block",
+            }}
+            sequence={[text, 1000, ""]}
+            repeat={Infinity}
+          />
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 };
 
