@@ -69,18 +69,18 @@ const Themen = () => {
   ];
 
   return (
-    <div className="container-fluid bg-info py-3">
+    <div className="container-fluid py-3">
       <div className="row w-75 mx-auto">
-        <div className="col d-flex align-content-center justify-content-evenly">
+        <div className="col d-flex flex-wrap align-content-center justify-content-evenly">
           {themen.map((thema, i) => (
             <Link
               to={thema.href}
               key={i}
-              className="bg-success rounded-4 text-decoration-none"
+              className="bg-success rounded-4 text-decoration-none mb-2"
               style={{ height: "12.4rem" }}
             >
               <div
-                className="col-2 bg-secondary-subtle text-center py-3 rounded-4"
+                className="bg-secondary-subtle text-center py-3 rounded-4"
                 style={{ height: "12rem", width: "12rem" }}
               >
                 <div className="text-success py-3 pb-4">{thema.icon}</div>

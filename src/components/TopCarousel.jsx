@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { TypeAnimation } from "react-type-animation";
@@ -35,7 +35,7 @@ const TopCarousel = () => {
     }
   };
 
-  const swiperRef = React.useRef(null);
+  const swiperRef = useRef(null);
 
   return (
     <>
@@ -43,7 +43,7 @@ const TopCarousel = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -56,7 +56,7 @@ const TopCarousel = () => {
         }}
         onSlideChange={handleSlideChange}
         className="mySwiper"
-        style={{ height: "75vh" }} // Set the height to 75vh
+        style={{ height: "65vh" }} // Set the height to 75vh
       >
         <SwiperSlide>
           <img
@@ -75,7 +75,7 @@ const TopCarousel = () => {
               height: "195px",
               display: "block",
             }}
-            sequence={[text, 1000, ""]}
+            sequence={[text, 1000, "0"]}
             repeat={Infinity}
           />
         </SwiperSlide>
@@ -102,6 +102,7 @@ const TopCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
+          className=""
             src="https://cdn.pixabay.com/photo/2023/09/04/10/31/swan-8232481_640.jpg"
             alt=""
           />

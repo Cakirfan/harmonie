@@ -97,7 +97,7 @@ const Footer = () => {
               <Link key={i} to={icon.href}>
                 <button
                   type="button"
-                  className="btn btn-outline-danger bg-white mx-1 mx-md-2 border border-white"
+                  className="btn btn-outline-danger mx-2 mb-1 mx-md-2"
                 >
                   {icon.icon}
                 </button>
