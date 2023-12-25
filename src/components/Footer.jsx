@@ -83,8 +83,8 @@ const Footer = () => {
       style={{ marginTop: "5rem" }}
     >
       <div>
-        <div className="row bg-dark mb-3 py-3">
-          <div className="col-6 text-end fs-2 mb-3">
+        <div className="row d-flex align-content-center justify-content-center bg-dark mb-3 py-2">
+          <div className="col-6 text-end fs-2 mb-3 mt-4 mt-md-2">
             Kontaktieren Sie uns per{" "}
             <FontAwesomeIcon
               className="fs-1 ms-3 text-end"
@@ -92,12 +92,12 @@ const Footer = () => {
               icon={faHandPointRight}
             />
           </div>
-          <div className="col-6 mt-4 mt-md-2">
+          <div className="col-6 mt-4 mt-md-2 py-2">
             {sozialIcons.map((icon, i) => (
               <Link key={i} to={icon.href}>
                 <button
                   type="button"
-                  className="btn btn-outline-danger mx-2 mb-1 mx-md-2"
+                  className="btn btn-outline-danger mx-2 mx-md-2"
                 >
                   {icon.icon}
                 </button>
