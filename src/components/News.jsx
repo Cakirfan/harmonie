@@ -45,7 +45,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -57,7 +57,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -76,7 +78,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -88,7 +90,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -107,7 +111,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -119,7 +123,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -138,7 +144,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -150,7 +156,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -169,7 +177,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -181,7 +189,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -200,7 +210,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -212,7 +222,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -231,7 +243,7 @@ const news = () => {
           <SwiperSlide className="overflow-hidden rounded-2">
             <div
               class="card w-100"
-              style={{ width: "30rem", minWidth: "25rem" }}
+              style={{ width: "30rem", minWidth: "25rem", fontSize:".8rem" }}
             >
               <div class="row g-0">
                 <div class="col-md-5">
@@ -243,7 +255,9 @@ const news = () => {
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="card-title fw-semibold text-success">Schlagzeile</h4>
+                    <h4 class="card-title fw-semibold text-success">
+                      Schlagzeile
+                    </h4>
                     <p class="card-text">
                       Wöchentliche oder monatliche Entwicklungen im Verein
                       können in diesem Bereich, unterstützt durch Bilder und
@@ -259,6 +273,9 @@ const news = () => {
               </div>
             </div>
           </SwiperSlide>
+          
+
+        
         </Swiper>
       </div>
     </div>
