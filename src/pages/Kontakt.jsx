@@ -1,6 +1,33 @@
 import React from "react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Kontakt = () => {
+  
+  const sozialIcons = [
+    {
+      href: "/",
+      icon: <FaFacebookF />,
+    },
+    {
+      href: "/",
+      icon: <FaInstagram />,
+    },
+    {
+      href: "/",
+      icon: <FaTwitter />,
+    },
+    {
+      href: "/",
+      icon: <FaLinkedin />,
+    },
+  ];
+
   return (
     <section className="container mt-5">
       <div className="row d-flex">
@@ -21,11 +48,50 @@ const Kontakt = () => {
               </p>
             </div>
           </div>{" "}
-          <div className="bg-dark text-white p-3 my-3 rounded-2">
+          <div className="bg-dark text-white p-2 my-3 rounded-2">
             <p>
               Für Ihre Wünsche und Anregungen rufen Sie bitte unser Telefon an,
               senden Sie eine E-Mail oder füllen Sie das Formular aus.
             </p>
+          </div>
+          <div className="bg-dark text-white p-2 text-center rounded-2">
+            <p>
+              Wir freuen uns auf jegliche Art der Kontaktaufnahme! Jede/r ist
+              auf eine Tasse Kaffee/Tee eingeladen. Anfragen für
+              Veranstaltungen, Kurse und Kooperationen sind besonders
+              willkommen. 
+              <p>Wir freuen auf Sie!</p>
+            </p>
+            <div className="d-flex align-content-center justify-content-center gap-1 ">
+              {sozialIcons.map((icon, index) => (
+                <Link
+                  key={index}
+                  to={icon.href}
+                  className="text-decoration-none border rounded-circle d-inline-block"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    transition: "background 0.3s, color 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#fff";
+                    e.currentTarget.style.color = "#000";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = "#fff";
+                  }}
+                >
+                  <span className="d-flex align-items-center justify-content-center h-100">
+                    {icon.icon}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="bg-dark text-white p-2 my-3 rounded-2">
+            <p>Bürozeiten: Montag- Dienstag- Freitag 10:00 bis 15:00 Uhr</p>
+            <p>Kurszeiten: Freitag- Sonntag 10:00 bis 17:00</p>
           </div>
         </div>
 

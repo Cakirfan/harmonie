@@ -11,7 +11,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
+      <Routes >
         <Route index element={<Home />} />
         <Route path="uberUns" element={<UberUns />} />
         <Route path="kontakt" element={<Kontakt />} />

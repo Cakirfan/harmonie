@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/img/logo-harmonie.jpeg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
+  const closeNavbar = () => {
+    setIsNavbarOpen(false);
+  };
+
   const menuItems = [
     { name: "Startseite", path: "/" },
     {
@@ -52,15 +63,11 @@ const Navbar = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDarkDropdown"
-            aria-controls="navbarNavDarkDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            onClick={toggleNavbar}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/" onClick={closeNavbar}>
             <img
               src={logo}
               alt="Logo-Harmonie"
@@ -69,8 +76,9 @@ const Navbar = () => {
             />
           </Link>
           <div
-            className="collapse navbar-collapse rounded-2"
-            id="navbarNavDarkDropdown"
+            className={`collapse navbar-collapse rounded-2 ${
+              isNavbarOpen ? "show" : ""
+            }`}
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {menuItems.map((item, i) => (
@@ -107,22 +115,21 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <form class="d-flex" role="search">
+             <form className="d-flex" role="search">
               <input
-                class="form-control me-2"
+                className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
             </form>
-            
           </div>
         </div>
       </nav>
-      <div style={{ height: "95px" }}></div>
+      <div style={{ height: "95px" }} onClick={closeNavbar}></div>
     </>
   );
 };

@@ -10,6 +10,8 @@ body {
 
 p {
   font-family: "ABeeZee", sans-serif;
+  font-size: .8rem;
+  text-align: center;
 }
 
 li {
