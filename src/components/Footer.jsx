@@ -122,7 +122,12 @@ const Footer = () => {
                 <div className="col d-flex gap-2 gap-md-5">
                   <span>Aktuelles</span>
                   <span>Archiv</span>
-                  <span>Impressum</span>
+                  <Link
+                    to="impressum"
+                    className="list-group-item text-decoration-none"
+                  >
+                    Impressum
+                  </Link>
                   <span>Datenschutzerklärung</span>
                 </div>
                 <div className="col d-flex flex-wrap gap-md-5 flex-md-nowrap">

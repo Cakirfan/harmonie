@@ -6,17 +6,19 @@ import UberUns from "../pages/UberUns";
 import Kontakt from "../pages/Kontakt";
 import Aktuelles from "../pages/veranstaltungen/Aktuelles";
 import Archiv from "../pages/veranstaltungen/Archiv";
+import Impressum from "../pages/Impressum";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes >
+      <Routes>
         <Route index element={<Home />} />
         <Route path="uberUns" element={<UberUns />} />
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="aktuelles" element={<Aktuelles />} />
         <Route path="archiv" element={<Archiv />} />
+        <Route path="impressum" element={<Impressum />} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -24,4 +26,3 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
-
