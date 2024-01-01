@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 const TopCarousel = () => {
   const [text, setText] = useState(
-    "Bu Alana istenilen herhangi bir yazi eklenebilir..."
+    "Jeder Mensch ist ein einzigartiger Schatz und dessen sind wir uns bewusst..."
   );
 
   const handleSlideChange = () => {
@@ -21,15 +21,15 @@ const TopCarousel = () => {
 
     switch (currentSlide) {
       case 0:
-        setText("Bu Alana istenilen herhangi bir yazi eklenebilir...");
+        setText("Jeder Mensch ist ein einzigartiger Schatz und dessen sind wir uns bewusst...");
         break;
-      case 1:
-        setText("Yeni bir metin...");
-        break;
-      case 2:
-        setText("Başka bir metin...");
-        break;
-      // Add more cases for additional slides
+      // case 1:
+      //   setText("Yeni bir metin...");
+      //   break;
+      // case 2:
+      //   setText("Başka bir metin...");
+      //   break;
+      // // Add more cases for additional slides
       default:
         setText("");
     }
@@ -59,15 +59,23 @@ const TopCarousel = () => {
         style={{ height: "65vh", backgroundSize: "cover" }} // Set the height to 75vh
       >
         <SwiperSlide>
-          <img
-            className="object-fit-cover"
-            src="https://cdn.pixabay.com/photo/2016/04/12/18/56/school-1325091_640.png"
-            alt=""
-          />
+          <video
+            className="object-fit-cover rounded-2 lh-1"
+            autoPlay
+            muted
+            loop
+            style={{ width: "98%", height: "100%" }}
+          >
+            <source
+              src="https://cdn.pixabay.com/vimeo/883402169/berge-188595.mp4?width=1280&hash=dd35a32cd52c7efa7e2e453438db851698f7333f"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
           <TypeAnimation
             style={{
               color: "white",
-              fontSize: "1rem",
+              fontSize: "1.8rem",
               position: "absolute",
               top: "50%",
               left: "50%",
@@ -76,51 +84,7 @@ const TopCarousel = () => {
               height: "195px",
               display: "block",
             }}
-            sequence={[text, 1000, "0"]}
-            repeat={Infinity}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="object-fit-cover"
-            src="https://cdn.pixabay.com/photo/2023/04/06/10/22/earth-day-7903523_640.png"
-            alt=""
-          />
-          <TypeAnimation
-            style={{
-              color: "white",
-              fontSize: "1rem",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              whiteSpace: "pre-line",
-              height: "195px",
-              display: "block",
-            }}
-            sequence={[text, 1000, ""]}
-            repeat={Infinity}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="object-fit-cover"
-            src="https://cdn.pixabay.com/photo/2016/11/30/12/09/question-mark-1872634_640.jpg"
-            alt=""
-          />
-          <TypeAnimation
-            style={{
-              color: "white",
-              fontSize: "1rem",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              whiteSpace: "pre-line",
-              height: "195px",
-              display: "block",
-            }}
-            sequence={[text, 1000, ""]}
+            sequence={[text, 3000, "0"]}
             repeat={Infinity}
           />
         </SwiperSlide>
