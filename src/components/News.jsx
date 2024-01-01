@@ -37,6 +37,10 @@ const News = () => {
               spaceBetween: 10,
             },
             768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1080: {
               slidesPerView: 3,
               spaceBetween: 20,
             },
