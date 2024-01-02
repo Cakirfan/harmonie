@@ -17,7 +17,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Startseite", path: "/" },
     {
-      name: "Wer Sind Wir",
+      name: "Wer Wir Sind",
       subTitel: [
         { titel: "Über Uns", path: "/uberUns" },
         { titel: "Hizmet Bewegung", path: "/bewegung" },
