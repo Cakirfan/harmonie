@@ -7,7 +7,7 @@ import News from "../components/News"
 const Home = () => {
   return (
     <div>
-      <div className="h-100 bg-body-secondary" style={{ height: "100%" }}>
+      <div className="h-100" style={{ height: "100%", backgroundColor: "#fff" }}>
         <TopCarousel />
         <Gründung />
         <News />
