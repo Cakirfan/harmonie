@@ -19,7 +19,7 @@ const Kontakt = () => {
     <section className="container mt-5">
       <div className="row d-flex">
         <div className="col-12 col-md-6">
-          <div className="border rounded-2 overflow-hidden">
+          <div className="border rounded-2 overflow-hidden bg-white">
             <h6 className="bg-dark text-white py-2 px-3 w-100">KONTAKT</h6>
             <div className="py-2 px-3">
               <ContactInfo />
@@ -102,7 +102,7 @@ const SocialIcons = ({ socialIcons }) => (
 );
 
 const ContactForm = () => (
-  <div className="border rounded-2 overflow-hidden">
+  <div className="border rounded-2 overflow-hidden bg-white">
     <h6 className="bg-dark text-white py-2 px-3">
       LASSEN SIE UNS EINE NACHRICHT
     </h6>
