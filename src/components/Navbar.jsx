@@ -20,7 +20,6 @@ const Navbar = () => {
       name: "Wer Wir Sind",
       subTitel: [
         { titel: "Über Uns", path: "/uberUns" },
-        { titel: "Hizmet Bewegung", path: "/bewegung" },
         { titel: "Vorstand", path: "/vorstand" },
         { titel: "Mitgliedsantrage", path: "/mAntrag" },
         { titel: "Impressum", path: "/impressum" },
