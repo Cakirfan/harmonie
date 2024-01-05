@@ -1,7 +1,7 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import newss from "../helper/data";
+import { newss } from "../helper/data";
 
 // Import Swiper styles
 import "swiper/css";

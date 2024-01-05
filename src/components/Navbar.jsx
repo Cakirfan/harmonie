@@ -28,7 +28,7 @@ const Navbar = () => {
     {
       name: "Themen",
       subTitel: [
-        { titel: "Kultur und Kunst", path: "/kulturKunst" },
+        { titel: "Kultur und Kunst", path: "/kulturundkunst" },
         { titel: "Religion", path: "/religion" },
         { titel: "Dialog", path: "/dialog" },
         { titel: "Jugendarbeit", path: "/jugendarbeit" },

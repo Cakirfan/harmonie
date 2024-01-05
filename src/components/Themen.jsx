@@ -20,7 +20,7 @@ const Themen = () => {
           icon={faPersonWalking}
         />
       ),
-      href: "/",
+      href: "kulturundkunst",
     },
     {
       name: "Religion",

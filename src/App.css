@@ -75,3 +75,32 @@ body {
   color: #db4408 !important;
 }
 /*! Themen END */
+
+
+/*! Kultur und Kunst START */
+.kultur-praf {
+  font-size: 1.15rem;
+}
+
+.kultur-praf p {
+  text-align: start;
+}
+
+.custom-card {
+  transition: transform 0.3s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.custom-card:hover {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.custom-card img {
+  transition: transform 0.3s;
+}
+
+.custom-card img:hover {
+  transform: scale(1.05);
+}
+/*! Kultur und Kunst END */
