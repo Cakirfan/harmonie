@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -8,12 +9,69 @@ import {
 import { Link } from "react-router-dom";
 
 const Kontakt = () => {
+  const API_URL = "http://localhost:3500/items";
+  const [kontakt, setKontakt] = useState([]);
+
+  const [formData, setFormData] = useState([
+    {
+      // id: 0,
+      name: "",
+      email: "",
+      tel: "",
+      betreff: "",
+      description: "",
+    },
+  ]);
+
   const socialIcons = [
     { href: "/", icon: <FaFacebookF /> },
     { href: "/", icon: <FaInstagram /> },
     { href: "/", icon: <FaTwitter /> },
     { href: "/", icon: <FaLinkedin /> },
   ];
+
+  const getData = async () => {
+    try {
+      const res = await axios.get(API_URL);
+      console.log(res.data);
+      setKontakt(res.data);
+    } catch (error) {
+      console.log("Error getting:", error.message);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(API_URL, formData);
+      console.log(res.data); // Log the response from the server
+      // You can update the state or show a success message if needed
+
+      setFormData({
+        // id: 0,
+        name: "",
+        email: "",
+        tel: "",
+        betreff: "",
+        description: "",
+      });
+    } catch (error) {
+      console.log("Error posting data:", error.message);
+    }
+  };
 
   return (
     <section className="container mt-5">
@@ -30,7 +88,11 @@ const Kontakt = () => {
         </div>
 
         <div className="col-12 col-md-6">
-          <ContactForm />
+          <ContactForm
+            handleSubmit={handleSubmit}
+            formData={formData}
+            handleChange={handleChange}
+          />
         </div>
       </div>
       <LocationMap />
@@ -101,23 +163,26 @@ const SocialIcons = ({ socialIcons }) => (
   </section>
 );
 
-const ContactForm = () => (
+const ContactForm = ({ handleSubmit, formData, handleChange }) => (
   <div className="border rounded-2 overflow-hidden bg-white">
     <h6 className="bg-dark text-white py-2 px-3">
       LASSEN SIE UNS EINE NACHRICHT
     </h6>
     <div className="container py-4">
-      <form id="contactForm">
+      <form onSubmit={handleSubmit} id="contactForm">
         {/* <!-- Name input --> */}
         <div className="form-floating mb-3">
           <input
-            className="form-control is-invalid"
-            id="floatingInput"
-            placeholder="name@example.com"
             type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="name@example.com"
+            className="form-control is-invalid"
             data-sb-validations="required"
           />
-          <label className="form-label" htmlFor="floatingInput">
+          <label className="form-label" htmlFor="name">
             Vorname - Nachname
           </label>
         </div>
@@ -125,36 +190,45 @@ const ContactForm = () => (
         {/* <!-- Email address input --> */}
         <div className="form-floating mb-3">
           <input
-            className="form-control is-invalid"
-            id="emailAddress"
-            placeholder="E-Mail"
             type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="name@example.com"
+            className="form-control is-invalid"
             data-sb-validations="required, email"
           />
-          <label className="form-label" htmlFor="emailAddress">
+          <label className="form-label" htmlFor="email">
             Email Addresse
           </label>
         </div>
 
         <div className="form-floating mb-3">
           <input
-            className="form-control is-invalid"
-            id="telefon"
-            placeholder="Telefon"
             type="tel"
+            id="tel"
+            name="tel"
+            value={formData.tel}
+            onChange={handleChange}
+            className="form-control is-invalid"
+            placeholder="Telefon"
             data-sb-validations="required, tel"
           />
-          <label className="form-label" htmlFor="telefon">
+          <label className="form-label" htmlFor="tel">
             Telefon
           </label>
         </div>
 
         <div className="form-floating mb-3">
           <input
-            className="form-control is-invalid"
-            id="betreff"
-            placeholder="Betreff"
             type="text"
+            id="betreff"
+            name="betreff"
+            value={formData.betreff}
+            onChange={handleChange}
+            className="form-control is-invalid"
+            placeholder="Betreff"
             data-sb-validations="required"
           />
           <label className="form-label" htmlFor="betreff">
@@ -165,13 +239,16 @@ const ContactForm = () => (
         {/* <!-- Message input --> */}
         <div className="form-floating mb-3">
           <textarea
-            className="form-control"
-            id="floatingTextarea"
             type="text"
+            id="description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            className="form-control"
             placeholder="Message"
             data-sb-validations="required"
           ></textarea>
-          <label className="form-label" htmlFor="floatingTextarea">
+          <label className="form-label" htmlFor="description">
             Kommentar
           </label>
         </div>
