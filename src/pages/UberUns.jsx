@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Typed from "typed.js";
+import InfoBogen from "../components/infoBogen/InfoBogen";
 
 const UberUns = () => {
 
@@ -26,6 +27,7 @@ const UberUns = () => {
 
   return (
     <section className="row d-flex justify-content-center text-center mt-5 mx-auto">
+      <InfoBogen />
       <div className="col col-md-9">
         <h1>
           Wilkommen in{" "}
