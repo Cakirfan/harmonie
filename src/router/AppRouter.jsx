@@ -9,11 +9,13 @@ import Archiv from "../pages/veranstaltungen/Archiv";
 import Impressum from "../pages/Impressum";
 import KulturKunst from "../pages/KulturKunst";
 import Religion from "../pages/Religion";
+import ScrollBtn from "../components/scrollTop/ScrollBtn";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollBtn />
       <Routes>
         <Route index element={<Home />} />
         <Route path="uberUns" element={<UberUns />} />
