@@ -8,6 +8,7 @@ import Aktuelles from "../pages/veranstaltungen/Aktuelles";
 import Archiv from "../pages/veranstaltungen/Archiv";
 import Impressum from "../pages/Impressum";
 import KulturKunst from "../pages/KulturKunst";
+import Religion from "../pages/Religion";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <Route path="archiv" element={<Archiv />} />
         <Route path="impressum" element={<Impressum />} />
         <Route path="kulturundkunst" element={<KulturKunst />} />
+        <Route path="religion" element={<Religion />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -38,7 +38,7 @@ const Footer = () => {
     },
     {
       name: "Religion",
-      href: "/",
+      href: "religion",
     },
     {
       name: "Dialog",

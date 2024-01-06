@@ -104,3 +104,11 @@ body {
   transform: scale(1.05);
 }
 /*! Kultur und Kunst END */
+
+.religion-section {
+  background: url('https://img.freepik.com/free-vector/horizontal-composition-with-two-white-flying-doves-blue-holding-empty-white-banner-its-beak-as-symbol-peace-harmony-realistic_1284-26908.jpg?size=626&ext=jpg&ga=GA1.1.258947574.1676464177&semt=sph') no-repeat center center fixed;
+  background-size: contain;
+  width: "100%";
+  border: 3px solid #000;
+  border-radius: 15px;
+}
