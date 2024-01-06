@@ -5,11 +5,11 @@ const Religion = () => {
   return (
     <div className="container">
       <section className="mb-5">
-        <h1 className="text-center fw-semibold mt-5">Religion</h1>
+        <h1 className="text-center fw-semibold mt-5" style={{filter:"drop-shadow(0 0 10px #3d3d3d)"}}>Religion</h1>
         <hr className="border-3 shadow border-primary" />
-        <div className="row my-md-3 religion-section">
-          <article className="kultur-praf p-5">
-            <p className="mt-5">
+        <div className="carousel slide my-md-3 religion-section text-white">
+          <div className="carousel-inner kultur-praf p-md-5 p-2">
+            <p className="mt-md-5">
               Unser Verein bietet eine Vielzahl von Angeboten für Muslime an, um
               ihr religiöses Wissen zu vertiefen. Ein zentraler Bestandteil
               dieser Angebote sind unsere Sohbetkreise, bei denen Gläubige
@@ -34,12 +34,12 @@ const Religion = () => {
               Vereinbarkeit von Demokratie und der islamischen Religion und
               lehnen jede Form von Extremismus und Menschenhass ab.
             </p>
-            <p className="mb-5">
+            <p className="mb-md-5">
               In unseren Räumlichkeiten bieten wir religiöse Kurse und
               Ethikkurse für Kinder und Jugendliche an den Wochenenden an. Zudem
               finden Freitagsgebete im kleineren Kreis statt.
             </p>
-          </article>
+          </div>
         </div>
         <hr className="border-3 shadow border-primary" />
       </section>
