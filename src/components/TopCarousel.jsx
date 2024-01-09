@@ -56,15 +56,15 @@ const TopCarousel = () => {
         }}
         onSlideChange={handleSlideChange}
         className="mySwiper"
-        style={{ height: "65vh", backgroundSize: "cover" }} // Set the height to 75vh
+        style={{ height: "89vh" }} // Set the height to 75vh
       >
         <SwiperSlide>
           <video
-            className="object-fit-cover rounded-2 lh-1"
+            className="object-fit-cover lh-1"
             autoPlay
             muted
             loop
-            style={{ width: "98%", height: "100%" }}
+            style={{ width: "100%", height: "100%" }}
           >
             <source
               src="https://cdn.pixabay.com/vimeo/883402169/berge-188595.mp4?width=1280&hash=dd35a32cd52c7efa7e2e453438db851698f7333f"
