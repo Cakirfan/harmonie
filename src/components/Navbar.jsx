@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark border-bottom border-5 border-primary">
+      <nav className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-primary">
         <div className="container">
           <button
             className="navbar-toggler"
@@ -81,11 +81,11 @@ const Navbar = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {menuItems.map((item, i) => (
-                <li className="nav-item dropdown ms-3" key={i}>
+                <li className="nav-item text-white dropdown ms-3" key={i}>
                   {item.subTitel ? (
                     <>
                       <button
-                        className="btn btn-dark nav-item dropdown-toggle"
+                        className="btn text-white nav-item dropdown-toggle"
                         id={`dropdownMenu${i}`}
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
@@ -107,22 +107,22 @@ const Navbar = () => {
                       </ul>
                     </>
                   ) : (
-                    <Link className="btn btn-dark nav-item" to={item.path}>
+                    <Link className="btn text-white nav-item" to={item.path}>
                       {item.name}
                     </Link>
                   )}
                 </li>
               ))}
             </ul>
-             <form className="d-flex" role="search">
+            <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Suchen"
                 aria-label="Search"
               />
               <button className="btn btn-outline-success" type="submit">
-                Search
+                Suchen
               </button>
             </form>
           </div>
