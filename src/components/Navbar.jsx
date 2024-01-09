@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-success">
+      <nav className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-white">
         <div className="container">
           <button
             className="navbar-toggler"
