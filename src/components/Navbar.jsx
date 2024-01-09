@@ -128,7 +128,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div style={{ height: "95px" }} onClick={closeNavbar}></div>
+      <div style={{ height: "91px" }} onClick={closeNavbar}></div>
     </>
   );
 };
