@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-primary">
+      <nav className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-success">
         <div className="container">
           <button
             className="navbar-toggler"
@@ -118,10 +118,10 @@ const Navbar = () => {
               <input
                 className="form-control me-2"
                 type="search"
-                placeholder="Suchen"
+                placeholder="Geben Sie den Text"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn text-white btn-outline-success" type="submit">
                 Suchen
               </button>
             </form>

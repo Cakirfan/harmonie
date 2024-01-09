@@ -79,15 +79,15 @@ const Footer = () => {
 
   return (
     <section
-      className="container-fluid text-white"
+      className="container-fluid bg-warning text-white"
       style={{ marginTop: "5rem" }}
     >
       <div>
-        <div className="row bg-dark mb-3 py-2">
-          <div className="col text-end fs-2 mb-3 mt-4 mt-md-2">
+        <div className="row mb-3 py-2">
+          <div className="col text-dark text-end fs-2 mb-3 mt-4 mt-md-2">
             Kontaktieren Sie uns per{" "}
             <FontAwesomeIcon
-              className="fs-1 ms-3 text-end"
+              className="fs-1 ms-3"
               style={{ height: "2rem" }}
               icon={faHandPointRight}
             />

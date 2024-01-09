@@ -14,8 +14,8 @@ import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 const News = () => {
   return (
-    <div className="container-fluid my-5 bg-dark py-5">
-      <h1 className="text-center text-white mb-4">Neuigkeiten</h1>
+    <div className="container-fluid bg-body-tertiary my-5 py-5">
+      <h1 className="text-center text-dark mb-4">Neuigkeiten</h1>
       <div className="row mx-3 mx-md-5">
         <Swiper
           slidesPerView={1}
@@ -47,8 +47,14 @@ const News = () => {
           }}
         >
           {newss.map((news) => (
-            <SwiperSlide key={news.id} className="overflow-hidden rounded-2">
-              <div className="card w-100" style={{ width: "30rem" }}>
+            <SwiperSlide
+              key={news.id}
+              className="overflow-hidden rounded-2"
+            >
+              <div
+                className="card w-100"
+                style={{ width: "30rem" }}
+              >
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img

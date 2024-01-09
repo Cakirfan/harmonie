@@ -4,9 +4,14 @@
   font-family: "Amaranth", sans-serif;
 }
 
-p {
+h1,h2,h3,h4,h5,h6 {
   font-family: "ABeeZee", sans-serif;
+  font-weight: bold;
+}
+
+p {
   text-align: center;
+  font-family: "ABeeZee", sans-serif;
 }
 
 li {
@@ -25,6 +30,7 @@ html,
 body {
   position: relative;
   height: 100%;
+  font-family: "ABeeZee", sans-serif;
 }
 
 body {
@@ -39,7 +45,7 @@ body {
 }
 
 .navbar {
-  background-color: rgba(255, 166, 0, 0.945);
+  background-color: #f75205;
 }
 
 /*! TopCarousel START */
