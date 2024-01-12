@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -7,21 +6,12 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+import db from "../firebase/firebase";
 
 const Kontakt = () => {
-  const API_URL = "http://localhost:3500/items";
-  const [kontakt, setKontakt] = useState([]);
+  const [formData, setFormData] = useState([]);
 
-  const [formData, setFormData] = useState([
-    {
-      // id: 0,
-      name: "",
-      email: "",
-      tel: "",
-      betreff: "",
-      description: "",
-    },
-  ]);
 
   const socialIcons = [
     { href: "/", icon: <FaFacebookF /> },
@@ -29,20 +19,6 @@ const Kontakt = () => {
     { href: "/", icon: <FaTwitter /> },
     { href: "/", icon: <FaLinkedin /> },
   ];
-
-  const getData = async () => {
-    try {
-      const res = await axios.get(API_URL);
-      console.log(res.data);
-      setKontakt(res.data);
-    } catch (error) {
-      console.log("Error getting:", error.message);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,23 +30,8 @@ const Kontakt = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const res = await axios.post(API_URL, formData);
-      console.log(res.data); // Log the response from the server
-      // You can update the state or show a success message if needed
-
-      setFormData({
-        // id: 0,
-        name: "",
-        email: "",
-        tel: "",
-        betreff: "",
-        description: "",
-      });
-    } catch (error) {
-      console.log("Error posting data:", error.message);
-    }
+    console.log("Form Data:", formData);
+    await addDoc(collection(db, "informations"), formData);
   };
 
   return (
@@ -169,7 +130,12 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
       LASSEN SIE UNS EINE NACHRICHT
     </h6>
     <div className="container py-4">
-      <form onSubmit={handleSubmit} id="contactForm">
+      <form
+        onSubmit={handleSubmit}
+        id="contactForm"
+        action="https://formspree.io/anafor505@gmail.com"
+        method="POST"
+      >
         {/* <!-- Name input --> */}
         <div className="form-floating mb-3">
           <input
