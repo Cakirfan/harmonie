@@ -8,10 +8,10 @@ import {
 import { Link } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import db from "../firebase/firebase";
+import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 
 const Kontakt = () => {
   const [formData, setFormData] = useState([]);
-
 
   const socialIcons = [
     { href: "/", icon: <FaFacebookF /> },
@@ -31,7 +31,20 @@ const Kontakt = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    await addDoc(collection(db, "informations"), formData);
+    try {
+      await addDoc(collection(db, "informations"), formData);
+      toastSuccessNotify("Erfolgreich gesendet!");
+      // Form başarıyla gönderildiğinde, inputları temizle
+      setFormData({
+        name: "",
+        email: "",
+        tel: "",
+        betreff: "",
+        description: "",
+      });
+    } catch (error) {
+      toastErrorNotify(error);
+    }
   };
 
   return (
@@ -145,8 +158,8 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
             value={formData.name}
             onChange={handleChange}
             placeholder="name@example.com"
-            className="form-control is-invalid"
-            data-sb-validations="required"
+            className="form-control"
+            required
           />
           <label className="form-label" htmlFor="name">
             Vorname - Nachname
@@ -162,8 +175,8 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
             value={formData.email}
             onChange={handleChange}
             placeholder="name@example.com"
-            className="form-control is-invalid"
-            data-sb-validations="required, email"
+            className="form-control"
+            required
           />
           <label className="form-label" htmlFor="email">
             Email Addresse
@@ -177,9 +190,8 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
             name="tel"
             value={formData.tel}
             onChange={handleChange}
-            className="form-control is-invalid"
+            className="form-control"
             placeholder="Telefon"
-            data-sb-validations="required, tel"
           />
           <label className="form-label" htmlFor="tel">
             Telefon
@@ -193,9 +205,9 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
             name="betreff"
             value={formData.betreff}
             onChange={handleChange}
-            className="form-control is-invalid"
+            className="form-control"
             placeholder="Betreff"
-            data-sb-validations="required"
+            required
           />
           <label className="form-label" htmlFor="betreff">
             Betreff
@@ -212,7 +224,7 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
             onChange={handleChange}
             className="form-control"
             placeholder="Message"
-            data-sb-validations="required"
+            required
           ></textarea>
           <label className="form-label" htmlFor="description">
             Kommentar
