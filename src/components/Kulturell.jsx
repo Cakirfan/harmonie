@@ -2,6 +2,7 @@ import React from "react";
 import { kulturData } from "../helper/data";
 
 const Kulturell = () => {
+  
   return (
     <div class="row row-cols-1 row-cols-md-3 g-4">
       {kulturData.map((item) => (
