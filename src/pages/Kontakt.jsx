@@ -238,7 +238,6 @@ const ContactForm = ({ handleSubmit, formData, handleChange }) => (
           </button>
         </div>
       </form>
-      ;
     </div>
   </div>
 );
