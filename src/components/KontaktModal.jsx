@@ -1,11 +1,100 @@
-import React from 'react'
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 
-const KontaktModal = () => {
+function KontaktModal({ show, handleClose }) {
+  const [formData, setFormData] = useState([]);
+  const handleChange = () => {};
+
   return (
-    <div>
-      <div class="modal-dialog modal-dialog-centered">...</div>
-    </div>
+    <>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        className="p-5 border border-warning"
+      >
+        <Modal.Header closeButton className="border border-danger">
+          <Modal.Title className="text-dark fw-semibold fs-2">
+            Kontaktformular
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="border border-danger">
+          <p className="text-start fw-bold">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, maxime inventore blanditiis laboriosam ducimus magnam.
+            Excepturi, dolorum? Exercitationem, nihil debitis?
+          </p>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Control
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                className="form-control"
+                required
+                autoFocus
+              />
+              <Form.Control
+                type="tel"
+                id="tel"
+                name="tel"
+                value={formData.tel}
+                onChange={handleChange}
+                placeholder="Telefon"
+                className="form-control mt-3"
+                required
+              />
+              <Form.Control
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="name@example.com"
+                className="form-control mt-3"
+                required
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Control
+                as="textarea"
+                id="nachricht"
+                rows={3}
+                placeholder="Nachricht"
+                type="textarea"
+                name="nachricht"
+                value={formData.nachricht}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="ms-4">
+              <Form.Check className="" aria-label="option 1" />
+              <p className="text-start fw-bold">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Recusandae, natus!
+              </p>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer className="border border-danger">
+          <Button variant="secondary" onClick={handleClose}>
+            Schließen
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Senden
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
 
-export default KontaktModal
+export default KontaktModal;

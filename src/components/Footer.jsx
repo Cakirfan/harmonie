@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaArrowRight,
@@ -11,8 +11,14 @@ import {
 import logo from "../assets/img/logo-harmonie.jpeg";
 import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import KontaktModal from "./KontaktModal";
 
 const Footer = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const sozialIcons = [
     {
       href: "/",
@@ -107,11 +113,13 @@ const Footer = () => {
               ))}
             </div>
             <div className="mt-md-1 pt-2 fs-4 text-center ms-2">
-              <button type="button" className="btn btn-success rounded-3 border-0 px-3">
-              <FaEnvelopeOpenText className="fs-5 mb-1 me-2"/>
-                <span className="py-2 fs-5">
-                  Kontaktformular
-                </span>
+              <button
+                type="button"
+                className="btn btn-success rounded-3 border-0 px-3"
+                onClick={handleShow}
+              >
+                <FaEnvelopeOpenText className="fs-5 mb-1 me-2" />
+                <span className="py-2 fs-5">Kontaktformular</span>
               </button>
             </div>
           </div>
@@ -174,6 +182,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <KontaktModal show={show} handleClose={handleClose} />
     </section>
   );
 };
