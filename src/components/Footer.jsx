@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   FaArrowRight,
+  FaEnvelopeOpenText,
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
@@ -92,17 +93,27 @@ const Footer = () => {
               icon={faHandPointRight}
             />
           </div>
-          <div className="col mt-4 mt-md-2 py-2">
-            {sozialIcons.map((icon, i) => (
-              <Link key={i} to={icon.href}>
-                <button
-                  type="button"
-                  className="btn btn-outline-danger mx-2 mx-md-2"
-                >
-                  {icon.icon}
-                </button>
-              </Link>
-            ))}
+          <div className="col d-flex">
+            <div className="mt-md-2 py-2">
+              {sozialIcons.map((icon, i) => (
+                <Link key={i} to={icon.href}>
+                  <button
+                    type="button"
+                    className="btn btn-outline-success mx-2 mx-md-2"
+                  >
+                    {icon.icon}
+                  </button>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-md-1 pt-2 fs-4 text-center ms-2">
+              <button type="button" className="btn btn-success rounded-3 border-0 px-3">
+              <FaEnvelopeOpenText className="fs-5 mb-1 me-2"/>
+                <span className="py-2 fs-5">
+                  Kontaktformular
+                </span>
+              </button>
+            </div>
           </div>
         </div>
         <div
