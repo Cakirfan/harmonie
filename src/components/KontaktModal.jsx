@@ -9,17 +9,13 @@ function KontaktModal({ show, handleClose }) {
 
   return (
     <>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        className="border border-warning"
-      >
-        <Modal.Header closeButton className="border border-danger">
-          <Modal.Title className="text-dark fw-semibold fs-2">
+      <Modal show={show} onHide={handleClose} className="border border-warning">
+        <Modal.Header closeButton className="bg-warning border border-danger">
+          <Modal.Title className=" text-dark fw-semibold fs-2">
             Kontaktformular
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="border border-danger">
+        <Modal.Body className="bg-danger-subtle border border-danger">
           <p className="text-start fw-bold">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur, maxime inventore blanditiis laboriosam ducimus magnam.
@@ -83,7 +79,7 @@ function KontaktModal({ show, handleClose }) {
             </Form.Group>
           </Form>
         </Modal.Body>
-        <Modal.Footer className="border border-danger">
+        <Modal.Footer className="bg-warning border border-danger">
           <Button variant="secondary" onClick={handleClose}>
             Schließen
           </Button>
