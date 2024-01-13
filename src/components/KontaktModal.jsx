@@ -49,7 +49,7 @@ function KontaktModal({ show, handleClose }) {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="name@example.com"
+                placeholder="email@beispiel.com"
                 className="form-control mt-3"
                 required
               />
