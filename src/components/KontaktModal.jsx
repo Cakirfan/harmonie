@@ -2,10 +2,16 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import { IoOpenOutline } from "react-icons/io5";
+import DatenSchutzModal from "./DatenSchutzModal";
 
 function KontaktModal({ show, handleClose }) {
   const [formData, setFormData] = useState([]);
   const handleChange = () => {};
+
+  const [showd, setShowd] = useState(false);
+  const handleClosed = () => setShowd(false);
+  const handleShowd = () => setShowd(true);
 
   return (
     <>
@@ -17,9 +23,8 @@ function KontaktModal({ show, handleClose }) {
         </Modal.Header>
         <Modal.Body className="bg-danger-subtle border border-danger">
           <p className="text-start fw-bold">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur, maxime inventore blanditiis laboriosam ducimus magnam.
-            Excepturi, dolorum? Exercitationem, nihil debitis?
+            Fühlen Sie sich frei uns zu kontaktieren! Mit diesem Formular können
+            Sie uns Ihre Fragen, Anregungen oder Feedback zukommen lassen.
           </p>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -72,9 +77,14 @@ function KontaktModal({ show, handleClose }) {
             </Form.Group>
             <Form.Group className="ms-4">
               <Form.Check className="" aria-label="option 1" />
-              <p className="text-start fw-bold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Recusandae, natus!
+
+              <p className="text-start">
+                Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich
+                stimme zu, dass meine Angaben zur Kontaktaufnahme und für
+                Rückfragen gespeichert werden.
+                <span className="" onClick={handleShowd}>
+                  <IoOpenOutline className="ms-1 text-primary" />
+                </span>
               </p>
             </Form.Group>
           </Form>
@@ -88,6 +98,7 @@ function KontaktModal({ show, handleClose }) {
           </Button>
         </Modal.Footer>
       </Modal>
+      <DatenSchutzModal showd={showd} handleClosed={handleClosed} />
     </>
   );
 }
