@@ -12,7 +12,7 @@ function KontaktModal({ show, handleClose }) {
       <Modal
         show={show}
         onHide={handleClose}
-        className="p-5 border border-warning"
+        className="border border-warning"
       >
         <Modal.Header closeButton className="border border-danger">
           <Modal.Title className="text-dark fw-semibold fs-2">
@@ -36,7 +36,6 @@ function KontaktModal({ show, handleClose }) {
                 placeholder="Name"
                 className="form-control"
                 required
-                autoFocus
               />
               <Form.Control
                 type="tel"
