@@ -5,7 +5,7 @@ const Religion = () => {
   return (
     <div className="container">
       <section className="mb-5">
-        <h1 className="text-center fw-semibold mt-5" style={{filter:"drop-shadow(0 0 10px #3d3d3d)"}}>Religion</h1>
+        <h1 className="text-center text-success fw-semibold mt-5" style={{filter:"drop-shadow(0 0 10px #3d3d3d)"}}>Religion</h1>
         <hr className="border-3 shadow border-primary" />
         <div className="carousel slide my-md-3 religion-section text-white">
           <div className="carousel-inner kultur-praf p-md-5 p-2">
