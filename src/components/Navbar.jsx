@@ -85,7 +85,7 @@ const Navbar = () => {
       >
         <div className="container">
           <button
-            className="navbar-toggler"
+            className="navbar-toggler bg-white ms-2 shadow-lg border-3 border-success"
             type="button"
             onClick={toggleNavbar}
           >
@@ -110,7 +110,9 @@ const Navbar = () => {
                   className="nav-item text-white dropdown ms-3"
                   key={i}
                   onClick={
-                    item.name === "Startseite" ? handleMenuItemClick : undefined
+                    item.name === "Startseite" || item.name === "Kontakt"
+                      ? handleMenuItemClick
+                      : undefined
                   }
                 >
                   {item.subTitel ? (
