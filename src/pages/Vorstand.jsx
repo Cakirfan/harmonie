@@ -3,12 +3,12 @@ import { FaHandPointRight } from "react-icons/fa";
 
 const Vorstand = () => {
   return (
-    <div className="container pt-5 px-5 pb-2">
+    <div className="container pt-5 px-md-5 pb-2">
       <h1 className="">Vorstand</h1>
       <div className="mx-auto">
-        <div className="card p-5 shadow-lg bg-dark-subtle">
+        <div className="card p-2 p-md-5 shadow-lg bg-dark-subtle">
           <p className="fs-4 text-success fw-semibold">Unser Vorstand besteht aus:</p>
-          <ul className="ms-5" style={{ maxWidth: "25rem" }}>
+          <ul className="ms-md-5" style={{ maxWidth: "35rem" }}>
             <li className="d-flex gap-2">
               <FaHandPointRight className="text-success fs-3" />{" "}
               <span className="fs-5">Einem Vorsitzenden</span>{" "}
@@ -24,10 +24,6 @@ const Vorstand = () => {
             <li className="d-flex gap-2">
               <FaHandPointRight className="text-success fs-3" />{" "}
               <span className="fs-5">Einem Schriftführer</span>
-            </li>
-            <li className="d-flex gap-2">
-              <FaHandPointRight className="text-success fs-3" />{" "}
-              <span className="fs-5">...... Beisitzer*innen</span>
             </li>
           </ul>
         </div>
