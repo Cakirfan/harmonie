@@ -6,7 +6,7 @@ const InfoBogen = () => {
   return (
     
       <section className="bg-warning btn-help position-absolute z-3" style={{top: "6rem", left: "1.5rem"}}>
-        <FaQuestion className="i" />
+        <FaQuestion className="i fs-5"  />
         <div className="text-section">
           <h5 className="fw-semibold">TITEL</h5>
           <p>
