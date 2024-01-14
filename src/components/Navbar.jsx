@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/img/logo-harmonie.jpeg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -12,6 +11,10 @@ const Navbar = () => {
 
   const closeNavbar = () => {
     setIsNavbarOpen(false);
+  };
+  const handleMenuItemClick = () => {
+    // Close the navbar when a menu item is clicked
+    closeNavbar();
   };
 
   const menuItems = [
@@ -55,9 +58,31 @@ const Navbar = () => {
     { name: "Kontakt", path: "/kontakt" },
   ];
 
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      // Check if the clicked element is outside the navbar
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        closeNavbar();
+      }
+    };
+
+    // Add click event listener to the window
+    window.addEventListener("click", handleOutsideClick);
+
+    // Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-white">
+      <nav
+        ref={navbarRef}
+        className="navbar navbar-expand-lg fixed-top border-bottom border-5 border-white"
+      >
         <div className="container">
           <button
             className="navbar-toggler"
@@ -81,7 +106,13 @@ const Navbar = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {menuItems.map((item, i) => (
-                <li className="nav-item text-white dropdown ms-3" key={i}>
+                <li
+                  className="nav-item text-white dropdown ms-3"
+                  key={i}
+                  onClick={
+                    item.name === "Startseite" ? handleMenuItemClick : undefined
+                  }
+                >
                   {item.subTitel ? (
                     <>
                       <button
@@ -98,7 +129,7 @@ const Navbar = () => {
                         aria-labelledby={`dropdownMenu${i}`}
                       >
                         {item.subTitel.map((sub, j) => (
-                          <li key={j}>
+                          <li key={j} onClick={handleMenuItemClick}>
                             <Link className="dropdown-item" to={sub.path}>
                               {sub.titel}
                             </Link>
@@ -121,7 +152,10 @@ const Navbar = () => {
                 placeholder="Geben Sie den Text"
                 aria-label="Search"
               />
-              <button className="btn text-white btn-outline-success" type="submit">
+              <button
+                className="btn text-white btn-outline-success"
+                type="submit"
+              >
                 Suchen
               </button>
             </form>
