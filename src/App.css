@@ -44,6 +44,8 @@ body {
   padding: 0;
 }
 
+
+/*! Navbar START */
 .navbar {
   background-color: #f13c05;
 }
@@ -82,6 +84,8 @@ body {
 .dropdown-menu li:hover {
   background-color: #f8f9fa;
 }
+/*! Navbar END */
+
 
 /*! TopCarousel START */
 .swiper {
@@ -106,7 +110,8 @@ body {
   height: 100%;
   object-fit: cover;
 }
-/*! TopCarousel START */
+/*! TopCarousel END */
+
 
 /*! Themen START */
 .themen-link:hover {
@@ -150,6 +155,8 @@ body {
 }
 /*! Kultur und Kunst END */
 
+
+/*! Religion START */
 .religion-section {
   background: url('https://img.freepik.com/free-vector/stained-glass-mosaic-church-temple-cathedral-windows-light-composition-with-ornate-skylight-rays-floor-reflection-vector-illustration_1284-82247.jpg?size=626&ext=jpg&ga=GA1.1.258947574.1676464177&semt=sph') no-repeat center center fixed;
   background-size: cover;
@@ -157,3 +164,4 @@ body {
   border: 3px solid #000;
   border-radius: 15px;
 }
+/*! Religion END */
