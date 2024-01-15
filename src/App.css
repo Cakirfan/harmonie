@@ -48,6 +48,41 @@ body {
   background-color: #f13c05;
 }
 
+/* Bu stil, dropdown'ın hover durumunda açılmasını sağlar */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Bu stil, dropdown menüleri için bazı düzenlemeler yapar */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+/* Bu stil, dropdown içindeki öğelerin arasındaki boşlukları belirler */
+.dropdown-menu li {
+  margin-bottom: 0.125rem;
+}
+
+/* Bu stil, dropdown içindeki öğelerin hover durumunu belirler */
+.dropdown-menu li:hover {
+  background-color: #f8f9fa;
+}
+
 /*! TopCarousel START */
 .swiper {
   width: 100%;

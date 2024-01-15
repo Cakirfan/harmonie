@@ -3,6 +3,7 @@ import logo from "../assets/img/logo-harmonie.jpeg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [openSubmenu, setOpenSubmenu] = useState(null);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -11,10 +12,15 @@ const Navbar = () => {
 
   const closeNavbar = () => {
     setIsNavbarOpen(false);
+    setOpenSubmenu(null); // Menüyü kapatırken açık submenu'yu sıfırla
   };
-  const handleMenuItemClick = () => {
-    // Close the navbar when a menu item is clicked
-    closeNavbar();
+
+  const handleMouseEnter = (index) => {
+    setOpenSubmenu(index);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenSubmenu(null);
   };
 
   const menuItems = [
@@ -75,7 +81,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("click", handleOutsideClick);
     };
-  }, []); // Empty dependency array means this effect runs once after the initial render
+  }, []); 
 
   return (
     <>
@@ -109,11 +115,8 @@ const Navbar = () => {
                 <li
                   className="nav-item text-white dropdown ms-3"
                   key={i}
-                  onClick={
-                    item.name === "Startseite" || item.name === "Kontakt"
-                      ? handleMenuItemClick
-                      : undefined
-                  }
+                  onMouseEnter={() => handleMouseEnter(i)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {item.subTitel ? (
                     <>
@@ -127,11 +130,13 @@ const Navbar = () => {
                         {item.name}
                       </button>
                       <ul
-                        className="dropdown-menu dropdown-menu-primary"
+                        className={`dropdown-menu dropdown-menu-primary ${
+                          openSubmenu === i ? "show" : ""
+                        }`}
                         aria-labelledby={`dropdownMenu${i}`}
                       >
                         {item.subTitel.map((sub, j) => (
-                          <li key={j} onClick={handleMenuItemClick}>
+                          <li key={j} onClick={closeNavbar}>
                             <Link className="dropdown-item" to={sub.path}>
                               {sub.titel}
                             </Link>
@@ -140,7 +145,11 @@ const Navbar = () => {
                       </ul>
                     </>
                   ) : (
-                    <Link className="btn text-white nav-item" to={item.path}>
+                    <Link
+                      className="btn text-white nav-item"
+                      to={item.path}
+                      onClick={closeNavbar}
+                    >
                       {item.name}
                     </Link>
                   )}
