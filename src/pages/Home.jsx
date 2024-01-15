@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div>
       <div className="h-100" style={{ height: "100%", backgroundColor: "#fff" }}>
-     
         <TopCarousel />
         <Gründung />
         <News />

@@ -11,12 +11,14 @@ import KulturKunst from "../pages/KulturKunst";
 import Religion from "../pages/Religion";
 import ScrollBtn from "../components/scrollTop/ScrollBtn";
 import Vorstand from "../pages/Vorstand";
+import GoHome from "../components/goHome/GoHome";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />
       <ScrollBtn />
+      <GoHome />
       <Routes>
         <Route index element={<Home />} />
         <Route path="uberUns" element={<UberUns />} />
