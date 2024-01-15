@@ -12,6 +12,7 @@ import Religion from "../pages/Religion";
 import ScrollBtn from "../components/scrollTop/ScrollBtn";
 import Vorstand from "../pages/Vorstand";
 import GoHome from "../components/goHome/GoHome";
+import Dialog from "../pages/Dialog";
 
 const AppRouter = () => {
   return (
@@ -29,6 +30,7 @@ const AppRouter = () => {
         <Route path="kulturundkunst" element={<KulturKunst />} />
         <Route path="religion" element={<Religion />} />
         <Route path="vorstand" element={<Vorstand />} />
+        <Route path="dialog" element={<Dialog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

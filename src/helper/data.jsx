@@ -175,4 +175,55 @@ const religionData = [
   },
 ];
 
-export { newss, kulturData, religionData };
+const dialogData = [
+  {
+    id: 1,
+    titel: "Hier kommt Schlagzeile",
+    desc: "Alle Dialogaktivitäten des Vereins können in diesem Bereich umfassend präsentiert werden. Unterstützt durch aussagekräftige Videos oder Fotos wird ein lebendiges Bild unserer vielfältigen Veranstaltungen gezeichnet.",
+    image:
+      "https://cdn.pixabay.com/photo/2018/09/04/10/16/feedback-3653368_640.jpg",
+    time: "...",
+  },
+  {
+    id: 2,
+    titel: "Hier kommt Schlagzeile",
+    desc: "Alle Dialogaktivitäten des Vereins können in diesem Bereich umfassend präsentiert werden. Unterstützt durch aussagekräftige Videos oder Fotos wird ein lebendiges Bild unserer vielfältigen Veranstaltungen gezeichnet.",
+    image:
+      "https://cdn.pixabay.com/photo/2018/09/04/10/16/feedback-3653368_640.jpg",
+    time: "...",
+  },
+  {
+    id: 3,
+    titel: "Hier kommt Schlagzeile",
+    desc: "Alle Dialogaktivitäten des Vereins können in diesem Bereich umfassend präsentiert werden. Unterstützt durch aussagekräftige Videos oder Fotos wird ein lebendiges Bild unserer vielfältigen Veranstaltungen gezeichnet.",
+    image:
+      "https://cdn.pixabay.com/photo/2018/09/04/10/16/feedback-3653368_640.jpg",
+    time: "...",
+  },
+  {
+    id: 4,
+    titel: "Hier kommt Schlagzeile",
+    desc: "Alle Dialogaktivitäten des Vereins können in diesem Bereich umfassend präsentiert werden. Unterstützt durch aussagekräftige Videos oder Fotos wird ein lebendiges Bild unserer vielfältigen Veranstaltungen gezeichnet.",
+    image:
+      "https://cdn.pixabay.com/photo/2018/09/04/10/16/feedback-3653368_640.jpg",
+    time: "...",
+  },
+  {
+    id: 5,
+    titel: "Hier kommt Schlagzeile",
+    desc: "Alle Dialogaktivitäten des Vereins können in diesem Bereich umfassend präsentiert werden. Unterstützt durch aussagekräftige Videos oder Fotos wird ein lebendiges Bild unserer vielfältigen Veranstaltungen gezeichnet.",
+    image:
+      "https://cdn.pixabay.com/photo/2018/09/04/10/16/feedback-3653368_640.jpg",
+    time: "...",
+  },
+  {
+    id: 6,
+    titel: "Hier kommt Schlagzeile",
+    desc: "Alle Dialogaktivitäten des Vereins können in diesem Bereich umfassend präsentiert werden. Unterstützt durch aussagekräftige Videos oder Fotos wird ein lebendiges Bild unserer vielfältigen Veranstaltungen gezeichnet.",
+    image:
+      "https://cdn.pixabay.com/photo/2018/09/04/10/16/feedback-3653368_640.jpg",
+    time: "...",
+  },
+];
+
+export { newss, kulturData, religionData, dialogData };
