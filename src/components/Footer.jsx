@@ -11,7 +11,7 @@ import {
 import logo from "../assets/img/logo-harmonie.jpeg";
 import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import KontaktModal from "./KontaktModal";
+import KontaktModal from "./modals/KontaktModal";
 
 const Footer = () => {
   const [show, setShow] = useState(false);
