@@ -31,7 +31,7 @@ const Themen = () => {
           icon={faGlobe}
         />
       ),
-      href: "/",
+      href: "religion",
     },
     {
       name: "Dialog",
@@ -42,7 +42,7 @@ const Themen = () => {
           icon={faHandsPraying}
         />
       ),
-      href: "/",
+      href: "dialog",
     },
     {
       name: "Jugendarbeit",
