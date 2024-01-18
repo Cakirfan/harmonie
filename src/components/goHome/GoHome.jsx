@@ -38,7 +38,7 @@ const GoHome = () => {
       onClick={goToHome}
     >
       <BsFillHouseCheckFill className="icon text-white ms-2" />
-      <span className="mx-1 text-white">Startseite</span>
+      <span className="mx-1 text-white text-center lh-sm">zur Startseite</span>
     </Link>
   );
 };
